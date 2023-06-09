@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import GeoChart from './GeoChart';
 
-function App() {
+const App = () => {
+  const chartData = [
+    {
+      id: "ARE",
+      value: 610382
+    },
+    // { id: 'CAN', value: 500 },
+    // { id: 'MEX', value: 200 },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1 className='text-center my-4 text-primary fw-bold text-uppercase'>Geo Chart Example</h1>
+      <GeoChart data={chartData} />
     </div>
   );
-}
+};
 
 export default App;
